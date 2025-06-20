@@ -10,51 +10,45 @@ export class BodyParseError extends Error {
   }
 }
 
-export const jsonBody = (
-  response: Response
-): ResultAsync<unknown, BodyParseError> =>
+export const jsonBody = (body: Body): ResultAsync<unknown, BodyParseError> =>
   fromPromise(
-    response.json(),
+    body.json(),
     (error) => new BodyParseError('Failed to parse JSON body', error)
   )
 
-export const textBody = (
-  response: Response
-): ResultAsync<string, BodyParseError> =>
+export const textBody = (body: Body): ResultAsync<string, BodyParseError> =>
   fromPromise(
-    response.text(),
+    body.text(),
     (error) => new BodyParseError('Failed to parse text body', error)
   )
 
-export const blobBody = (
-  response: Response
-): ResultAsync<Blob, BodyParseError> =>
+export const blobBody = (body: Body): ResultAsync<Blob, BodyParseError> =>
   fromPromise(
-    response.blob(),
+    body.blob(),
     (error) => new BodyParseError('Failed to parse blob body', error)
   )
 
 export const formDataBody = (
-  response: Response
+  body: Body
 ): ResultAsync<FormData, BodyParseError> =>
   fromPromise(
-    response.formData(),
+    body.formData(),
     (error) => new BodyParseError('Failed to parse form data body', error)
   )
 
 export const arrayBufferBody = (
-  response: Response
+  body: Body
 ): ResultAsync<ArrayBuffer, BodyParseError> =>
   fromPromise(
-    response.arrayBuffer(),
+    body.arrayBuffer(),
     (error) => new BodyParseError('Failed to parse array buffer body', error)
   )
 
 export const bytesBody = (
-  response: Response
+  body: Body
 ): ResultAsync<Uint8Array, BodyParseError> =>
   fromPromise(
-    response.bytes(),
+    body.bytes(),
     (error) => new BodyParseError('Failed to parse bytes body', error)
   )
 
