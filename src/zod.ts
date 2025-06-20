@@ -1,5 +1,6 @@
-import { err, ok, Result } from 'neverthrow'
-import { z } from 'zod/v4'
+import type { Result } from 'neverthrow'
+import { err, ok } from 'neverthrow'
+import type { z } from 'zod/v4'
 
 export const zodParse = <T>(
   schema: z.ZodType<T>,

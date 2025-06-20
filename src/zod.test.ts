@@ -1,4 +1,4 @@
-import { test, expect } from 'vitest'
+import { expect, test } from 'vitest'
 import { z } from 'zod/v4'
 import { zodParse } from './zod'
 import { err, ok } from 'neverthrow'

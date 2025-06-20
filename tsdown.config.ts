@@ -8,6 +8,7 @@ export default defineConfig({
   outDir: 'dist',
   format: 'esm',
   dts: true,
+  external: ['zod'],
   sourcemap: production,
   treeshake: production,
   attw: production && { profile: 'esmOnly' },

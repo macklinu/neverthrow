@@ -1,6 +1,7 @@
 {
-  "extends": "@total-typescript/tsconfig/bundler/no-dom/library",
+  "extends": "@total-typescript/tsconfig/bundler/dom/library",
   "compilerOptions": {
+    "verbatimModuleSyntax": true,
     "baseUrl": ".",
     "paths": {
       "~/*": ["./src/*"]

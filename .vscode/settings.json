@@ -2,6 +2,6 @@
   "oxc.enable": true,
   "eslint.enable": false,
   "editor.codeActionsOnSave": {
-    "source.fixAll": "explicit"
+    "source.fixAll.oxc": "explicit"
   }
 }

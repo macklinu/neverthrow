@@ -1,7 +1,6 @@
 {
   "name": "@macklinu/neverthrow",
-  "private": true,
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "A collection of utilities used alongside neverthrow",
   "repository": "macklinu/neverthrow",
   "author": "Macklin Underdown <macklinu@gmail.com>",
@@ -10,6 +9,14 @@
   "type": "module",
   "exports": {
     "./package.json": "./package.json",
+    "./fetch": {
+      "types": "./dist/fetch.d.ts",
+      "import": "./dist/fetch.js"
+    },
+    "./json": {
+      "types": "./dist/json.d.ts",
+      "import": "./dist/json.js"
+    },
     "./zod": {
       "types": "./dist/zod.d.ts",
       "import": "./dist/zod.js"
