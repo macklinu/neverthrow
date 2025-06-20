@@ -1,0 +1,59 @@
+{
+  "name": "@macklinu/neverthrow",
+  "private": true,
+  "version": "0.0.0",
+  "description": "A collection of utilities used alongside neverthrow",
+  "repository": "macklinu/neverthrow",
+  "author": "Macklin Underdown <macklinu@gmail.com>",
+  "license": "MIT",
+  "packageManager": "pnpm@10.12.1",
+  "type": "module",
+  "exports": {
+    "./package.json": "./package.json",
+    "./zod": {
+      "types": "./dist/zod.d.ts",
+      "import": "./dist/zod.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development tsdown --watch",
+    "build": "cross-env NODE_ENV=production tsdown",
+    "release": "pnpm build && changeset publish",
+    "test": "vitest",
+    "lint": "oxlint",
+    "typecheck": "tsc --noEmit",
+    "prepare": "husky"
+  },
+  "peerDependencies": {
+    "neverthrow": "^8.2.0",
+    "zod": "^3.25.0"
+  },
+  "peerDependenciesMeta": {
+    "neverthrow": {
+      "optional": false
+    },
+    "zod": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@arethetypeswrong/cli": "^0.18.2",
+    "@changesets/cli": "^2.29.4",
+    "@macklinu/prettier-config": "^0.0.0",
+    "@total-typescript/tsconfig": "^1.0.4",
+    "@types/node": "^24.0.3",
+    "cross-env": "^7.0.3",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.1.2",
+    "neverthrow": "^8.2.0",
+    "oxlint": "^1.2.0",
+    "prettier": "^3.5.3",
+    "tsdown": "^0.12.8",
+    "typescript": "^5.8.3",
+    "vitest": "^3.2.4",
+    "zod": "^3.25.67"
+  }
+}
