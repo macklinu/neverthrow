@@ -1,6 +1,6 @@
 {
   "name": "@macklinu/neverthrow",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "A collection of utilities used alongside neverthrow",
   "repository": "macklinu/neverthrow",
   "author": "Macklin Underdown <macklinu@gmail.com>",
